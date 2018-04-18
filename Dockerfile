@@ -29,6 +29,7 @@ RUN set -ex \
 
 # Install openssh && nano && supervisor && git
 RUN apt-get update && apt-get install -y openssh-server nano supervisor git
+RUN export TERM=xterm
 
 # Install mysql-clients && rsync. In order to sync database with the container
 RUN apt-get install -y rsync mysql-client
