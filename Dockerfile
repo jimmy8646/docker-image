@@ -40,6 +40,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # ADD Configuration to the Container
 ADD conf/supervisord.conf /etc/supervisord.conf
 ADD conf/apache2.conf /etc/apache2/apache2.conf
+ADD conf/000-default.conf /etc/apache2/sites-available/000-default.conf
 ADD conf/php.ini /usr/local/etc/php/
 
 # Add Scripts
